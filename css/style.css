@@ -6,8 +6,8 @@ h6 {
     font-family: 'Libre Franklin';
     font-style: normal;
     font-weight: 400;
-    font-size: 10px;
-    line-height: 12px;
+    font-size: 0.625em;
+    line-height: 0.75em;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #999999;
@@ -17,8 +17,8 @@ h6 {
     font-family: 'Libre Franklin';
     font-style: normal;
     font-weight: 700;
-    font-size: 10px;
-    line-height: 12px;
+    font-size: 0.625em;
+    line-height: 0.75em;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #000000;    
@@ -28,8 +28,8 @@ h6 {
     font-family: 'Tenor Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 1.25em;
+    line-height: 1.5em;
     text-transform: uppercase;
     color: #000000;
 }
@@ -44,10 +44,6 @@ h1 {
 }
 
 
-.wrapper {
-    width: 100%;
-    
-}
 .main_container {
     max-width: 1200px;
     margin: 0 auto;
@@ -179,11 +175,9 @@ h1 {
 
 
 .footer_logo {
-    width: 75em;
     height: 62px;
     display: flex;
     margin-top: 93px;
-    border-bottom: 1px solid #4D4D4D;
 }
 
 .copy {
@@ -220,3 +214,80 @@ h1 {
     align-self: end;
     }
 
+@media screen and (max-width: 767px) {
+    .wrapper {min-width: none;
+    }
+
+    .big {
+        display: grid;
+        grid-template-rows: 2fr 1fr;
+    }
+
+    .big_title {margin: 0;}
+    
+    .section_1 {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows:repeat(3,1fr);
+        gap: 10px;
+        margin-bottom: 5%;
+        margin-left: 5%;
+    }
+
+    .section_2 {
+        display: grid;
+        grid-template-columns:repeat(2,1fr);
+        grid-template-rows:repeat(4,1fr);
+        gap: 10px;
+        margin-left: 5%;
+    }
+
+    .section_3 {
+        display: grid;
+        grid-template:repeat(4,1fr)/repeat(1,1fr);
+        
+    }
+
+    .img_bottom img {  width: 100%;
+        height: 80%;
+        object-fit: cover;
+    }
+
+    .img_bottom{ margin-left: 8%;}
+
+    .header_menu {
+        min-width: 750px;
+    }
+
+    .footer {
+        min-width: 750px;
+        height: fit-content;
+    }
+
+    .footer_nav {display: none;}
+
+    .btn {
+        justify-self: center;
+        margin-bottom: 5%;
+    }
+
+    .photo img {
+        width: 100%;
+        height: 50%;
+        row-gap: 20%;
+        object-fit: cover;
+    }
+
+    .description {
+        font-size: 0.85em;
+        line-height: 1em;
+    }
+
+    .autor {
+        font-size: 0.45em;
+        line-height: 0.55em;  
+    }
+
+    h6 {display: none;}
+    
+    }
